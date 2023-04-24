@@ -9,7 +9,6 @@ const HomePage = () => {
   const handleSubmit = async (event) => {
     // Stop the form from submitting and refreshing the page.
     event.preventDefault()
-    // console.log('here', process.env.SHEET_ID)
 
     const form = {
       name, 
@@ -28,8 +27,7 @@ const HomePage = () => {
 
     const content = await response.json();
 
-    console.log(content.data.tableRange)
-    alert(content.data.tableRange)
+    alert(content?.data?.tableRange)
 
     setMessage('')
     setEmail('')
