@@ -28,6 +28,7 @@ export default async function hanlder(req, res) {
     const response = await sheets.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
       range: "A1:C1",
+      // range: "Sheet3!A1:C1",
       valueInputOption: "USER_ENTERED",
       requestBody: {
         values: [[body.name, body.email, body.message]],
